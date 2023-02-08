@@ -1,9 +1,8 @@
 import { State } from 'lib/store';
-import React from 'react';
 import { useSelector } from 'react-redux';
 import './style.scss';
 
-interface TableProps {
+export interface TableProps {
   bordered?: boolean,
   size: "small" | "middle" | "large",
 }
@@ -22,18 +21,22 @@ export const Table = ({
       className={styles.join(' ')}
       {...props}
     >
-      <tr>
-        {data.column.map((col) => ( <th>{col.title}</th>))}
-      </tr>
-      {data.row.map((row) => (
+      <thead>
         <tr>
-        {
-          (data.column.map((col) => (
-            <td>{row[col.keyIndex]}</td>
-          )))
-        }
+          {data.column.map((col, i) => ( <th key={i}>{col.title}</th>))}
         </tr>
-      ))}
+      </thead>
+      <tbody>
+        {data.row.map((row, i) => (
+          <tr key={i}>
+          {
+            (data.column.map((col, j) => (
+              <td key={j}>{row[col.keyIndex]}</td>
+            )))
+          }
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 };
