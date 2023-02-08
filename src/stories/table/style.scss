@@ -1,0 +1,38 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  text-align: left;
+  padding: 8px;
+}
+
+.table--bordered { 
+  td, th {
+    border: 1px solid #dddddd;
+  }
+}
+
+.table { 
+  &--small{
+    td, th {
+      padding: 4px 4px;
+    }
+  }
+  &--middle{
+    td, th {
+      padding: 8px 8px;
+    }
+  }
+  &--large{
+    td, th {
+      padding: 12px 12px;
+    }
+  }
+}
+
+tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
