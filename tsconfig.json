@@ -9,11 +9,14 @@
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "declaration": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
     "module": "esnext",
+    "outDir": "dist",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -23,5 +26,14 @@
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "rollup.config.js",
+    "./src/reportWebVitals.ts",
+    "./src/App.tsx",
+    "./src/App.css",
+    "./src/App.test.tsx",
+    "./src/setupTests.ts"
   ]
 }
