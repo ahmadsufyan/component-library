@@ -9,18 +9,6 @@ export default {
     italic: false,
     underline: false
   },
-  argTypes: {
-    label: {
-      table: {
-        disable: true
-      }
-    },
-    display: {
-      table: {
-        disable: true
-      }
-    }
-  }
 } as ComponentMeta<typeof Typography>;
 
 const Template: ComponentStory<typeof Typography> = (args) => <Typography {...args} />;
@@ -28,12 +16,11 @@ const Template: ComponentStory<typeof Typography> = (args) => <Typography {...ar
 export const Heading = Template.bind({});
 Heading.args = {
   variant: "h1",
-  label: "Your text here",
+  children: "This is heading"
 };
 
 export const Paragraph = Template.bind({});
 Paragraph.args = {
   variant: "p",
-  label: "Your text here",
-  display: "inline"
+  children: "This is paragraph"
 };

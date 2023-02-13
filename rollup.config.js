@@ -24,12 +24,17 @@ export default {
     peerDepsExternal(),
     resolve(),
     commonjs(),
-    typescript({ useTsconfigDeclarationDir: true }),
-    postcss({
-      extensions: [".scss", ".css"],
+    typescript({
+      exclude: ["**/stories.tsx"],
     }),
-  ],
-  files: [
-    "/lib"
+    postcss({
+      config:{
+        path: "./postcss.config.js"
+      },
+      extract: false,
+      minimize: false,
+      modules: false,
+      extensions: ['scss', '.css'],
+    }),
   ]
 };
