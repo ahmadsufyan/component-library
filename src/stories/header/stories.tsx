@@ -14,6 +14,7 @@ export default {
 export const Default: ComponentStory<typeof Header> = (args) => {
   return(
     <Header>
+      Header
     </Header>
   )
 };

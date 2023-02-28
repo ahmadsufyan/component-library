@@ -15,6 +15,7 @@ export default {
 export const Default: ComponentStory<typeof Footer> = (args) => {
   return(
     <Footer>
+      Footer
     </Footer>
   )
 };
