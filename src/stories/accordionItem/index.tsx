@@ -10,6 +10,8 @@ export interface AccordionItemProps {
   title?: string,
   suffixIcon?: boolean,
   children?: React.ReactNode|AccordionItemProps[],
+  style?: React.CSSProperties,
+  className?: string,
   onActive?: (id: string) => void
 }
 
@@ -21,6 +23,8 @@ export const AccordionItem: React.FC<AccordionItemProps>  = ({
   onActive,
   title,
   suffixIcon = true,
+  style,
+  className,
   children
 }: AccordionItemProps) => {
   const [active, setActive] = useState(false);
@@ -35,10 +39,13 @@ export const AccordionItem: React.FC<AccordionItemProps>  = ({
   }, [isActive])
 
   return (
-    <div className='h-max w-full'>
+    <div
+      style={style}
+      className={`h-max w-full ${className}`}
+    >
       <div className={'accordion-item--title ' + (active ? "accordion-item--active" : "")}>
         <button
-          className='break-words text-left flex-1'
+          className='break-words text-left flex-1 leading-6'
           onClick={() => {
             setOpen(true)
             setActive(true)

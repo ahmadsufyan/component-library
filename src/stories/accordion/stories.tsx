@@ -52,7 +52,6 @@ export default {
   },
 } as Meta<AccordionProps & { data: AccordionItemProps[]}>;
 
-
 export const Default: Story<AccordionProps & { data: AccordionItemProps[]}> = (args) => {
   const { data } = args
 

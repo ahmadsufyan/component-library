@@ -1,7 +1,7 @@
 .accordion-item{
   &--title{
     @apply flex flex-row items-center;
-    @apply px-2 py-1 my-1 rounded;
+    @apply pl-2 pr-3 py-1 my-1 rounded;
     @apply font-semibold text-left;
     @apply hover:bg-neutral-100;
   }
@@ -11,7 +11,7 @@
   }
 
   &--icon{
-    min-height: 24px;
-    min-width: 24px;
+    min-height: 28px;
+    min-width: 28px;
   }
 }

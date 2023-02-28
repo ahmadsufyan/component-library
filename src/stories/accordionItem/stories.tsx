@@ -7,7 +7,7 @@ export default {
   component: AccordionItem,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   args: {
-    title: "Your text here",
+    title: "Your title here",
     isOpen: false,
     suffixIcon: true
   },
@@ -17,8 +17,13 @@ export default {
 export const Default: Story<AccordionItemProps> = (args) => {
   return(
     <AccordionItem
+      className='w-[200px]'
       suffixIcon={true}
       {...args}
-    />
+    >
+      <div className='rounded bg-neutral-50 p-4'>
+        Your content Here
+      </div>
+    </AccordionItem>
   )
 };
