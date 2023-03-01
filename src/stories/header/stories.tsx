@@ -13,8 +13,8 @@ export default {
 
 export const Default: ComponentStory<typeof Header> = (args) => {
   return(
-    <Header>
-      Header
+    <Header className='flex items-center p-4'>
+      <span className='font-bold'>Header</span>
     </Header>
   )
 };

@@ -13,7 +13,7 @@ export const Header:React.FC<HeaderProps> = ({
 }) => {
   return(
     <header
-      className={`text-white w-full p-10 min-h-[60px] bg-black  ${className}`}
+      className={`text-white w-full min-h-[72px] bg-black  ${className}`}
       style={style}
     >
       {children}
