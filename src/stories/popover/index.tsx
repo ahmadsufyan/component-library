@@ -61,7 +61,7 @@ export const Popover: React.FC<PopoverProps> & Extended = ({
       }}
     >
       <div
-        className='font-semibold hover:underline hover:text-blue-500'
+        className={'font-semibold hover:underline hover:text-blue-500 ' + (open ? "text-blue-500" : "")}
         onClick={() => {
           onClick && onClick()
         }}

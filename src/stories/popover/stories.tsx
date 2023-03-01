@@ -16,7 +16,7 @@ export const Item: Story<PopoverProps> = (args) => {
         {...args}
         title={"Click/Hover Me"}
       >
-        <Popover.Item>Test test</Popover.Item>
+        <Popover.Item>Popover Item</Popover.Item>
       </Popover>
     </div>
   )
