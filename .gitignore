@@ -38,3 +38,4 @@ yarn-error.log*
 /dist/esm/stories/page/index.d.ts
 /dist/esm/stories/table/index.d.ts
 /dist/esm/stories/typography/index.d.ts
+/dist
