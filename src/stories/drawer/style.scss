@@ -1,0 +1,60 @@
+.drawer{
+  @apply transition-all overflow-x-hidden bg-gray-400;
+  @apply fixed z-10;
+}
+
+.top{
+  @apply left-0 top-0 w-full;
+
+  &--open{
+    @apply p-4;
+    height: 300px;
+  }
+  
+  &--close{
+    @apply p-0;
+    height: 0px;
+  }
+}
+
+.bottom{
+  @apply left-0 bottom-0 w-full;
+
+  &--open{
+    @apply p-4;
+    height: 300px;
+  }
+  
+  &--close{
+    @apply p-0;
+    height: 0px;
+  }
+}
+
+.right{
+  @apply top-0 right-0 h-full;
+
+  &--open{
+    @apply p-4;
+    width: 300px;
+  }
+  
+  &--close{
+    @apply p-0;
+    width: 0px;
+  }
+}
+
+.left{
+  @apply top-0 left-0 h-full;
+
+  &--open{
+    @apply p-4;
+    width: 300px;
+  }
+  
+  &--close{
+    @apply p-0;
+    width: 0px;
+  }
+}
