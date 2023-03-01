@@ -1,6 +1,6 @@
 {
   "name": "@ahmadsufyan/component-library",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -72,6 +72,7 @@
     "rollup": "^3.15.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-typescript2": "^0.34.1",
     "sass": "^1.58.0",
     "tailwindcss": "^3.2.4",
@@ -79,7 +80,7 @@
     "webpack": "^5.75.0"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "@ahmadsufyan/component-library@0.2.4",
+  "_id": "@ahmadsufyan/component-library@0.2.5",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js"
 }
