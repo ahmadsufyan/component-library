@@ -24,7 +24,7 @@ export const Sider:React.FC<SiderProps> = ({
 const Left:React.FC<SiderProps> = ({
 }) => {
   return(
-    <div className='w-max h-screen bg-neutral-100 pl-2 py-1 overflow-y-auto'>
+    <div className='w-[360px] h-screen bg-neutral-100 px-2 py-1 overflow-y-scroll'>
       <Accordion>
         <Accordion.Item
           id={"1"}
@@ -63,7 +63,7 @@ const Right:React.FC<SiderProps> = ({
   } as AccordionItemProps
 
   return(
-    <div className='w-max h-screen bg-neutral-100 pl-2 py-1 overflow-y-auto'>
+    <div className='w-max h-screen pl-2 py-1 overflow-y-auto'>
       <Accordion traceTree={false}>
         <Accordion.Item
           id={"1"}

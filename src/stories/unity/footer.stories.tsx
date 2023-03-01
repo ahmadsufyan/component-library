@@ -38,8 +38,7 @@ export const Default: ComponentStory<typeof Footer> = (args) => {
             <span className='leading-none'>{" Documentation"}</span>
           </a>
         </div>
-        <div className='col-span-8 text-sm leading-5'>
-          <div className="col-span-12 md:col-span-8 lg:col-span-9">
+          <div className="col-span-12 md:col-span-8 lg:col-span-9 text-sm leading-5">
             <div className='leading-none'>{"Copyright ©  2023  Unity Technologies"}</div>
               <div>
                 <ul className='flex flex-row flex-wrap'>
@@ -98,10 +97,9 @@ export const Default: ComponentStory<typeof Footer> = (args) => {
               </ul>
             </div>
             <div>
-              <div className="pb-12">
-                "Unity", Unity logos, and other Unity trademarks are trademarks or registered trademarks of Unity Technologies or its affiliates in the U.S. and elsewhere
-                (<a href="https://unity3d.com/legal/trademarks">more info here</a>). Other names or brands are trademarks of their respective owners.
-              </div>
+            <div className="pb-12">
+              "Unity", Unity logos, and other Unity trademarks are trademarks or registered trademarks of Unity Technologies or its affiliates in the U.S. and elsewhere
+              (<a className='anchor' href="https://unity3d.com/legal/trademarks">more info here</a>). Other names or brands are trademarks of their respective owners.
             </div>
           </div>
         </div>
