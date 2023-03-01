@@ -5,8 +5,8 @@ export interface DrawerProps {
   isOpen?: boolean,
   style?: React.CSSProperties,
   className?: string,
-  position?: "top"|"bottom"|"left"|"right",
-  children: React.ReactNode,
+  placement?: "top"|"bottom"|"left"|"right",
+  children?: React.ReactNode,
   onClose?: () => void,
 }
 
@@ -14,7 +14,7 @@ export const Drawer: React.FC<DrawerProps>= ({
   isOpen = false,
   onClose,
   style,
-  position = "right",
+  placement = "right",
   className,
   children
 }) => {
@@ -41,7 +41,7 @@ export const Drawer: React.FC<DrawerProps>= ({
   return(
     <div
       ref={ref}
-      className={`drawer ${className} ${position} ${position}--` + (open ? "open" : "close")}
+      className={`drawer ${placement} ${placement}--` + (open ? "open" : "close") + ` ${className}`}
       style={style}
     >
       {children}

@@ -1,19 +1,20 @@
 .drawer{
-  @apply transition-all overflow-x-hidden bg-gray-400;
-  @apply fixed z-10;
+  @apply transition-all overflow-x-hidden;
+  @apply fixed;
+  z-index: 1;
+  background-color: #f3f4f6
 }
 
 .top{
   @apply left-0 top-0 w-full;
 
   &--open{
-    @apply p-4;
-    height: 300px;
+    @apply h-[300px] p-4;
   }
   
   &--close{
-    @apply p-0;
-    height: 0px;
+    padding: 0px !important;
+    height: 0px !important;
   }
 }
 
@@ -21,13 +22,12 @@
   @apply left-0 bottom-0 w-full;
 
   &--open{
-    @apply p-4;
-    height: 300px;
+    @apply h-[300px] p-4;
   }
   
   &--close{
-    @apply p-0;
-    height: 0px;
+    padding: 0px !important;
+    height: 0px !important;
   }
 }
 
@@ -35,13 +35,12 @@
   @apply top-0 right-0 h-full;
 
   &--open{
-    @apply p-4;
-    width: 300px;
+    @apply w-[300px] p-4;
   }
   
   &--close{
-    @apply p-0;
-    width: 0px;
+    padding: 0px !important;
+    width: 0px !important;
   }
 }
 
@@ -49,12 +48,11 @@
   @apply top-0 left-0 h-full;
 
   &--open{
-    @apply p-4;
-    width: 300px;
+    @apply w-[300px] p-4;
   }
   
   &--close{
-    @apply p-0;
-    width: 0px;
+    padding: 0px !important;
+    width: 0px !important;
   }
 }

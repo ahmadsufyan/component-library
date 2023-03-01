@@ -1,3 +1,19 @@
 .popover{
   @apply min-h-[48px] px-5;
 }
+
+.input{
+  border: 0.0625rem solid #d1d5db;
+  border-radius: 0.1875rem;
+  box-sizing: border-box;
+  color: #6b7280;
+  display: block;
+  font-family: Inter,sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.25rem;
+  outline: none;
+  padding: 0.75rem 0.8125rem;
+  resize: none;
+  width: 100%;
+}
