@@ -1,0 +1,77 @@
+.popup{
+  @apply cursor-pointer relative inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  @mixin outside-content{
+    @apply w-max text-white absolute ;
+    z-index: 1;
+  }
+
+  .inner-content{
+    @apply border bg-black;
+    border-color: rgba(255, 255, 255, 0.5)
+  }
+
+  .bottom{
+    @apply pt-1;
+    top: 100%;
+    left: 0%;
+    transform: translateX(-25%)
+  }
+
+  .right{
+    @apply pl-2;
+    left: 100%;
+    top: 0%;
+  }
+
+  .left{
+    @apply pr-2;
+    right: 100%;
+    top: 0%;
+  }
+
+  .top{
+    @apply pb-1;
+    bottom: 100%;
+    left: 0%;
+    transform: translateX(-25%)
+  }
+
+  .bottomLeft{
+    @apply pt-1;
+    top: 100%;
+    left: 0%;
+  }
+
+  .bottomRight{
+    @apply pt-1;
+    top: 100%;
+    right: 0%;
+  }
+
+  .topLeft{
+    @apply pb-1;
+    bottom: 100%;
+    left: 0%;
+  }
+
+  .topRight{
+    @apply pb-1;
+    bottom: 100%;
+    right: 0%;
+  }
+
+  .visible{
+    @include outside-content;
+    visibility: visible;
+  }
+
+  .hide{
+    @include outside-content;
+    visibility: hidden;
+  }
+}
