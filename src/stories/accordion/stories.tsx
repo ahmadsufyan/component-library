@@ -72,13 +72,16 @@ export const Default: Story<AccordionProps & { data: AccordionItemProps[]}> = (a
   }
 
   return(
-    <Accordion {...args}>
+    <Accordion
+      {...args}
+      className={"!w-[300px]"}
+    >
       {generateItem(data)}
     </Accordion>
   )
 };
 
-export const SingleOption: Story<AccordionProps & { data: AccordionItemProps[]}> = (args) => {
+export const SingleSelection: Story<AccordionProps & { data: AccordionItemProps[]}> = (args) => {
   const { data } = args
 
   function generateItem(data:AccordionItemProps[]){
@@ -102,6 +105,7 @@ export const SingleOption: Story<AccordionProps & { data: AccordionItemProps[]}>
   return(
     <Accordion
       {...args}
+      className={"!w-[300px]"}
       traceTree={false}
     >
       {generateItem(data)}
@@ -109,7 +113,7 @@ export const SingleOption: Story<AccordionProps & { data: AccordionItemProps[]}>
   )
 };
 
-export const MultiOption: Story<AccordionProps & { data: AccordionItemProps[]}> = (args) => {
+export const TraceSelection: Story<AccordionProps & { data: AccordionItemProps[]}> = (args) => {
   const { data } = args
 
   function generateItem(data:AccordionItemProps[]){
@@ -133,6 +137,7 @@ export const MultiOption: Story<AccordionProps & { data: AccordionItemProps[]}> 
   return(
     <Accordion
       {...args}
+      className={"!w-[300px]"}
       traceTree={true}
     >
       {generateItem(data)}

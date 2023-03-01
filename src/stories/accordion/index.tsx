@@ -3,7 +3,9 @@ import { AccordionItem } from 'stories/accordionItem';
 import './style.scss';
 
 export interface AccordionProps {
-  traceTree?: boolean
+  traceTree?: boolean,
+  className?: string,
+  style?: React.CSSProperties,
   children: React.ReactNode,
 }
 
@@ -13,6 +15,8 @@ interface Extended {
 
 export const Accordion: React.FC<AccordionProps> & Extended = ({
   traceTree = true,
+  className,
+  style,
   children,
 }: AccordionProps) => {
   const [array, setArray] = useState<React.ReactNode>()
@@ -79,7 +83,10 @@ export const Accordion: React.FC<AccordionProps> & Extended = ({
   }, [children, activeTree, traceTree])
 
   return (
-    <div className='w-[300px]'>
+    <div
+      className={`w-full ${className}`}
+      style={style}
+    >
       {array}
     </div>
   );
