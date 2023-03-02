@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { AccordionItem } from 'stories/accordionItem';
+import { AccordionItem } from '../accordionItem';
 import './style.scss';
 
 export interface AccordionProps {

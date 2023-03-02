@@ -27,6 +27,7 @@
   "include": [
     "src"
   ],
+  // if rollup.config.js set modules to true, this option is used
   "exclude": [
     "node_modules",
     "rollup.config.js",

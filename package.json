@@ -1,6 +1,6 @@
 {
   "name": "@ahmadsufyan/component-library",
-  "version": "0.2.5",
+  "version": "0.2.12",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -80,7 +80,12 @@
     "webpack": "^5.75.0"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "@ahmadsufyan/component-library@0.2.5",
+  "_id": "@ahmadsufyan/component-library@0.2.12",
   "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js"
+  "module": "dist/esm/index.js",
+  "dir": "dist",
+  "files": [
+    "dist",
+    "README.md"
+  ]
 }

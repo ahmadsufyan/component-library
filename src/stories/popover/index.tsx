@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { PopoverItem } from 'stories/popoverItem';
+import { PopoverItem } from '../popoverItem';
 import './style.scss';
 
 export interface PopoverProps {

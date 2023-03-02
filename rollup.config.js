@@ -4,6 +4,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import postcss from "rollup-plugin-postcss";
 import svg from 'rollup-plugin-svg'
+import path from "path";
 
 const packageJson = require("./package.json");
 
@@ -14,11 +15,17 @@ export default {
       file: packageJson.main,
       format: "cjs",
       sourcemap: true,
+      // dir: packageJson.dir,
+      // preserveModules: true,
+      // preserveModulesRoot: 'src'
     },
     {
       file: packageJson.module,
       format: "esm",
       sourcemap: true,
+      // dir: packageJson.dir,
+      // preserveModules: true,
+      // preserveModulesRoot: 'src'
     },
   ],
   plugins: [
@@ -27,14 +34,14 @@ export default {
     commonjs(),
     svg(),
     typescript({
-      exclude: ["**/stories.tsx"],
+      exclude: ["**/stories.tsx", "**/*.stories.tsx"],
     }),
     postcss({
       config:{
         path: "./postcss.config.js"
       },
       extract: false,
-      minimize: false,
+      minimize: true,
       modules: false,
       extensions: ['scss', '.css'],
     }),
