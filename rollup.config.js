@@ -42,7 +42,7 @@ export default {
       },
       extract: false,
       minimize: true,
-      modules: false,
+      modules: true,
       extensions: ['scss', '.css'],
     }),
   ]

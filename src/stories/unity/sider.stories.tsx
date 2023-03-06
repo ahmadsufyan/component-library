@@ -13,7 +13,7 @@ export default {
   }
 } as ComponentMeta<typeof Sider>;
 
-export const Left: ComponentStory<typeof Sider> = (args) => {
+export const SideNav: ComponentStory<typeof Sider> = (args) => {
   return(
     <Sider
       type={'left'}
@@ -22,7 +22,7 @@ export const Left: ComponentStory<typeof Sider> = (args) => {
   )
 };
 
-export const Right: ComponentStory<typeof Sider> = (args) => {
+export const TopicNav: ComponentStory<typeof Sider> = (args) => {
   return(
     <Sider
       type={'right'}
