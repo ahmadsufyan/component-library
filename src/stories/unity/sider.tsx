@@ -1,6 +1,6 @@
-import { Accordion } from 'stories/accordion';
-import { AccordionItemProps } from 'stories/accordionItem';
-import './sider.style.scss';
+import { Accordion } from '../accordion';
+import { AccordionItemProps } from '../accordionItem';
+import styles from "./sider.module.scss";
 
 export interface SiderProps {
   type?: "left"|"right"

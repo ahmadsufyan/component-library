@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Footer } from '../footer';
-import "./footer.style.scss";
+import styles from "./footer.module.scss";
 
 export default {
   title: 'Unity/Footer',
@@ -20,7 +20,7 @@ export const Default: ComponentStory<typeof Footer> = (args) => {
             className='inline-flex items-center font-semibold text-lg'
             href='https://docs.unity.com/'
           >
-            <svg className='inline mr-1 svg' role="img" width="122" height="48" viewBox="0 0 133 48" xmlns="http://www.w3.org/2000/svg">
+            <svg className={`inline mr-1 ${styles['svg']}`} role="img" width="122" height="48" viewBox="0 0 133 48" xmlns="http://www.w3.org/2000/svg">
               <title>Unity logo</title>
               <path
                 fill="#fff"
@@ -38,59 +38,59 @@ export const Default: ComponentStory<typeof Footer> = (args) => {
             <span className='leading-none'>{" Documentation"}</span>
           </a>
         </div>
-          <div className="col-span-12 md:col-span-8 lg:col-span-9 text-sm leading-5">
-            <div className='leading-none'>{"Copyright ©  2023  Unity Technologies"}</div>
-              <div>
-                <ul className='flex flex-row flex-wrap'>
-                  <li className="list">
-                    <a
-                      href="https://unity3d.com/legal"
-                      className="anchor"
-                      target="_blank"
-                      rel="noreferrer">
-                      Legal
-                    </a>
-                  </li>
-                  <li className="list">
-                    <a
-                      href="https://unity3d.com/legal/privacy-policy"
-                      className="anchor"
-                      target="_blank"
-                      rel="noreferrer">
-                      Privacy Policy
-                    </a>
-                  </li>
-                  <li className="list">
-                    <a
-                      href="https://docs.unity3d.com/Manual/TermsOfUse.html"
-                      className="anchor"
-                      target="_blank"
-                      rel="noreferrer">
-                      Terms Of Use
-                    </a>
-                  </li>
-                <li className="list">
+        <div className="col-span-12 md:col-span-8 lg:col-span-9 text-sm leading-5">
+          <div className='leading-none'>{"Copyright ©  2023  Unity Technologies"}</div>
+            <div>
+              <ul className='flex flex-row flex-wrap'>
+                <li className={styles['list']}>
+                  <a
+                    href="https://unity3d.com/legal"
+                    className={styles['anchor']}
+                    target="_blank"
+                    rel="noreferrer">
+                    Legal
+                  </a>
+                </li>
+                <li className={styles['list']}>
+                  <a
+                    href="https://unity3d.com/legal/privacy-policy"
+                    className={styles['anchor']}
+                    target="_blank"
+                    rel="noreferrer">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li className={styles['list']}>
+                  <a
+                    href="https://docs.unity3d.com/Manual/TermsOfUse.html"
+                    className={styles['anchor']}
+                    target="_blank"
+                    rel="noreferrer">
+                    Terms Of Use
+                  </a>
+                </li>
+                <li className={styles['list']}>
                   <a
                     href="https://unity3d.com/legal/cookie-policy"
-                    className="anchor"
+                    className={styles['anchor']}
                     target="_blank"
                     rel="noreferrer">
                   Cookies
                   </a>
                 </li>
-                <li className="list">
+                <li className={styles['list']}>
                   <a
                     href="https://unity3d.com/legal/do-not-sell-my-personal-information"
-                    className="anchor"
+                    className={styles['anchor']}
                     target="_blank"
                     rel="noreferrer">
                     Do Not Sell My Personal Information
                   </a>
                 </li>
-                <li className="list">
+                <li className={styles['list']}>
                   <a
                     href="#"
-                    className="anchor ot-sdk-show-settings">
+                    className={styles['anchor']}>
                     Cookies Settings
                   </a>
                 </li>
@@ -99,7 +99,7 @@ export const Default: ComponentStory<typeof Footer> = (args) => {
             <div>
             <div className="pb-12">
               "Unity", Unity logos, and other Unity trademarks are trademarks or registered trademarks of Unity Technologies or its affiliates in the U.S. and elsewhere
-              (<a className='anchor' href="https://unity3d.com/legal/trademarks">more info here</a>). Other names or brands are trademarks of their respective owners.
+              (<a className={styles['anchor']} href="https://unity3d.com/legal/trademarks">more info here</a>). Other names or brands are trademarks of their respective owners.
             </div>
           </div>
         </div>

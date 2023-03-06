@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './style.scss';
+import styles from './style.module.scss';
 
 export interface DrawerProps {
   isOpen?: boolean,
@@ -41,7 +41,7 @@ export const Drawer: React.FC<DrawerProps>= ({
   return(
     <div
       ref={ref}
-      className={`drawer ${placement} ${placement}--` + (open ? "open" : "close") + ` ${className}`}
+      className={`${styles['drawer']} ${styles[placement]} ${styles[placement + "--" + (open ? "open" : "close")]} ` + ` ${className}`}
       style={style}
     >
       {children}

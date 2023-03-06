@@ -29,7 +29,6 @@ export const Default: ComponentStory<typeof Drawer> = (args) => {
         {...args}
         isOpen={isOpen}
         onClose={() => {
-          console.log("Asdasda")
           setIsOpen(false)
         }}
       >

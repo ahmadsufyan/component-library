@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Chevron from '../assets/chevron-down.svg';
-import './style.scss';
+import styles from './style.module.scss';
 
 export interface AccordionItemProps {
   id?: string,
@@ -43,7 +43,7 @@ export const AccordionItem: React.FC<AccordionItemProps>  = ({
       style={style}
       className={`h-max w-full ${className}`}
     >
-      <div className={'accordion-item--title ' + (active ? "accordion-item--active" : "")}>
+      <div className={`${styles['accordion-item--title']} ` + (active ? `${styles['accordion-item--active']}` : "")}>
         <button
           className='break-words text-left flex-1 leading-6'
           onClick={() => {
@@ -60,7 +60,7 @@ export const AccordionItem: React.FC<AccordionItemProps>  = ({
           }}
         >
           <img
-            className={'transition-transform accordion-item--icon ' + (!open || !collapsible ? '-rotate-90' : '')}
+            className={`transition-transform ${styles['accordion-item--icon']} ` + (!open || !collapsible ? '-rotate-90' : '')}
             src={Chevron}
           />
         </button>

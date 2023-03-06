@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { AccordionItem } from '../accordionItem';
-import './style.scss';
+import styles from './style.module.scss';
 
 export interface AccordionProps {
   traceTree?: boolean,

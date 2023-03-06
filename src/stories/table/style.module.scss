@@ -1,10 +1,10 @@
-table {
+.table {
   font-family: arial, sans-serif;
   @apply w-full border-collapse;
-}
 
-td, th {
-  @apply p-2 text-left;
+  td, th {
+    @apply p-2 text-left;
+  }
 }
 
 .table { 

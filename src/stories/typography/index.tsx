@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.scss";
+import styles from './style.module.scss';
 
 export interface TypographyProps {
   strong?: boolean,
@@ -19,16 +19,16 @@ export const Typography = ({
 }: TypographyProps) => {
   const Component = variant
 
-  const styles:string[] = []
-  if(strong) styles.push("!font-bold")
-  if(underline) styles.push("!underline")
-  if(italic) styles.push("!italic")
-  styles.push(`text--${variant}`)
+  const newStyles:string[] = []
+  if(strong) newStyles.push("!font-bold")
+  if(underline) newStyles.push("!underline")
+  if(italic) newStyles.push("!italic")
+  newStyles.push(styles[`text--${variant}`])
   
   return(
     <Component
       {...props}
-      className={styles.join(' ')}
+      className={newStyles.join(' ')}
     >
       {children}
     </Component>

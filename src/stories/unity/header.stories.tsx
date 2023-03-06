@@ -1,14 +1,14 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Header } from '../header';
-import "./header.style.scss";
-import { Popover } from 'index';
+import styles from "./header.module.scss";
+import { Popover } from '../popover';
 import { ReactComponent as SearchIcon } from '../assets/search.svg';
 import { ReactComponent as DashboardIcon } from '../assets/dashboard.svg';
 import { ReactComponent as ConnectIcon } from '../assets/connect.svg';
 import { ReactComponent as AssetStoreIcon } from '../assets/asset-store.svg';
 import { ReactComponent as ForumIcon } from '../assets/forum.svg';
-import { Drawer } from 'stories/drawer';
+import { Drawer } from '../drawer';
 
 export default {
   title: 'Unity/Header',
@@ -64,7 +64,7 @@ export const Default: ComponentStory<typeof Header> = (args) => {
         <div className='inline'>
           <div className='flex'>
             <Popover
-              className='popover'
+              className={styles['popover']}
               title={"All Docs"}
               position="bottomRight"
             >
@@ -74,12 +74,12 @@ export const Default: ComponentStory<typeof Header> = (args) => {
               <Popover.Item>Unity Gaming Service REST API Docs</Popover.Item>
             </Popover>
             <Popover
-              className='popover'
+              className={styles['popover']}
               title={"Learning"}
             >
             </Popover>
             <Popover
-              className='popover'
+              className={styles['popover']}
               title={"Community"}
               position="bottomRight"
             >
@@ -88,7 +88,7 @@ export const Default: ComponentStory<typeof Header> = (args) => {
               <Popover.Item>Answer</Popover.Item>
             </Popover>
             <Popover
-              className='popover'
+              className={styles['popover']}
               title={"Support & Services"}
               position="bottomRight"
             >
@@ -161,7 +161,7 @@ export const Default: ComponentStory<typeof Header> = (args) => {
       >
         <div className='text-lg mb-4'>Search Unity</div>
         <input
-          className='input'
+          className={styles['input']}
           type="text"
         >
         </input>

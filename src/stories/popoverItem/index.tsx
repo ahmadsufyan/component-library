@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss';
+import styles from './style.module.scss';
 
 export interface PopoverItemProps {
   style?: React.CSSProperties,
@@ -27,7 +27,7 @@ export const PopoverItem: React.FC<PopoverItemProps> = ({
   }
 
   return(
-    <a style={style} className={`item ${className}`}>
+    <a style={style} className={`${styles['item']} ${className}`}>
       {prefixIcon && resizeIfIcon(prefixIcon)}
       {children}
     </a>

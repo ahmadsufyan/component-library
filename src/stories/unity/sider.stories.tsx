@@ -1,7 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Sider } from './sider';
-import "./sider.style.scss";
 
 export default {
   title: 'Unity/Sider',

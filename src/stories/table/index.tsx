@@ -1,4 +1,4 @@
-import './style.scss';
+import styles from './style.module.scss';
 
 export interface TableProps {
   bordered?: boolean,
@@ -14,11 +14,11 @@ export const Table = ({
   data = [],
   ...props
 }: TableProps) => {
-  const styles:string[] = [`table--${size}`]
-  if(bordered) styles.push("table--bordered")
+  const newStyle:string[] = [styles[`table--${size}`]]
+  if(bordered) newStyle.push(styles["table--bordered"])
   return (
     <table
-      className={styles.join(' ')}
+      className={newStyle.join(' ')}
       {...props}
     >
       <thead>

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { PopoverItem } from '../popoverItem';
-import './style.scss';
+import styles from './style.module.scss';
 
 export interface PopoverProps {
   style?: React.CSSProperties,
@@ -48,7 +48,7 @@ export const Popover: React.FC<PopoverProps> & Extended = ({
   return(
     <button
       ref={ref}
-      className={`popup ${className}`}
+      className={`${styles['popup']} ${className}`}
       style={style}
       onMouseEnter={() => {
         if(triggerer === 'hover') setOpen(true)
@@ -69,9 +69,9 @@ export const Popover: React.FC<PopoverProps> & Extended = ({
         {title}
       </div>
       {children && <span
-        className={(open ? "visible" : "hide") + ` ${position}`}
+        className={(open ? `${styles['visible']}` : `${styles['hide']}`) + ` ${styles[position]}`}
       >
-        <div className='inner-content'>
+        <div className={`${styles['inner-content']}`}>
           {React.Children.count(children) > 0 ?
             <ul className='list-none min-w-[12rem] relative'>
               {React.Children.map(children, (element) => {

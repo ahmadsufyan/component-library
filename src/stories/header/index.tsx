@@ -1,4 +1,4 @@
-import './style.scss';
+import styles from './style.module.scss';
 
 export interface HeaderProps {
   style?: React.CSSProperties,
